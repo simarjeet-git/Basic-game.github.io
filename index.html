@@ -3,14 +3,30 @@
     <head>
         <meta charset="utf-8">
         <title>Rock-paper-scissor</title>
+        <link type="stylesheet" href="all.css"/>
         <link rel="stylesheet" href="style.css"/>
-        <script src="main.js"></script>
     </head>
     <body>
-        <input type="button" onclick="gamecode(0,getComputerChoice()) " value="Rock">
-        <input type="button" onclick="gamecode(1,getComputerChoice()) " value="Paper">
-        <input type="button" onclick="gamecode(2,getComputerChoice()) " value="Scissor">
-         
-        
+        <div id = "gamebody"> 
+        <div id="container"> 
+            <div id="item1">
+                <h1>User Choice.! </h1>
+                <button type="button" id="btn1">Rock</button>
+                <button type="button" id="btn2">Paper</button>
+                <button type="button" id="btn3">Scissor</button>
+            </div>
+             <button id = "item2" type="button">Game Restart</button>
+            <div id="item3">
+                <h1>Computer Choice.!</h1>
+                
+            </div>
+            <div id="item4">
+                <h1>Result</h1>
+                
+            </div>
+             
+        </div>
+    </div>
+        <script src="main.js"></script>
     </body>
 </html>
