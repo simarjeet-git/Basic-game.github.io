@@ -40,14 +40,14 @@
     width: 240px;
     height: 280px;
     background-color: red;
-    overflow:scroll;
+    overflow:auto;
  }
  #item4{
     width: 320px;
     height: 200px;
     background-color: gray;
     grid-column: span 3;
-    overflow: scroll;
+    overflow: auto;
     
  }
  h1{
