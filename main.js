@@ -1,23 +1,54 @@
-function gamecode(u, c )
+  let btnpress1 = document.getElementById("btn1");
+  btnpress1.addEventListener("click", function(){
+    gamecode( 0, getComputerChoice() );
+  });
+
+  let btnpress2 = document.getElementById("btn2");
+  btnpress2.addEventListener("click", function(){
+    gamecode( 0, getComputerChoice() );
+  });
+  
+  let btnpress3 = document.getElementById("btn3");
+  btnpress3.addEventListener("click", function(){
+    gamecode( 0, getComputerChoice() );
+  });
+  
+  function printresult(results){
+    let result =  document.getElementById("item4")
+
+    let displayresult =  document.createElement("h3")
+    displayresult.textContent = results
+    result.appendChild(displayresult)
+  
+  }
+  
+ function gamecode(u, c )
 { 
+     
       if (u===c){
-        document.write("wow tough competition")
+         printresult("WOW TOUGH COMPETITON")
 
     }
     else if (u===0&&c===2){
-        document.write("yahooo you won")
+       printresult("YAHOO YOU WON")
     }
     else if (u===2&&c===1){
-        document.write("yahooo you won")
+      printresult("YAHOO YOU WON")
     }
     else if (u===1&&c===0){
-        document.write("yahooo you won")
+      printresult("YAHOO YOU WON")
         
 
     }
     else{
-        document.write("sorry you lost")
+      printresult("SORRY YOU LOST")   
     }
+ }
+ function computerchoose(computerresult){
+let computerC = document.getElementById("item3")
+let computerdisplay = document.createElement("h3")
+computerdisplay.textContent =  computerresult
+computerC.appendChild(computerdisplay)
  }
   function getComputerChoice() {
   
@@ -26,17 +57,14 @@ function gamecode(u, c )
     const random = Math.floor(Math.random() * months.length);
     
      if (random===0){
-      document.write("Computer choose = Rock")
-      document.write("<br>")
-
+       computerchoose("ROCK")
      }
      else if (random===1){
-      document.write("Computer choose = Paper")
-      document.write("<br>")
+      computerchoose("PAPER")
      }
      else if(random===2) {
-      document.write("Computer choose = Scissor")
-      document.write("<br>")
+      computerchoose("SCISSOR")
      }
      return(random)
       }
+      let gameclear =  document.getElementById("item2").addEventListener('click',()=>{location.reload()})
